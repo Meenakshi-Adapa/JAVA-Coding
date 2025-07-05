@@ -1,22 +1,24 @@
-import java. util.*;
+import java.util.*;
+ 
+ class Char_occur {
+     public static void main(String args[]) {
+      System.out.println("Enter the string");
+      Scanner sc = new Scanner(System.in);
+      String s = sc.nextLine();
+      char[] ch = s.toCharArray();
+      HashMap<Character,Integer> map = new HashMap<>();
+      for (char c : ch) { if(map.containsKey(c)) {
+        map.put(c,map.get(c)+1);
+      } else {
+        map.put(c,1);
+      }
 
-public class Char_occur {
-  public static void main(String args[]) {
-    System.out.println("Enter the string :");
-    Scanner sc = new Scanner(System.in);
-    String s = sc.nextLine();
-    char[] chars = s.toCharArray();
-    HashMap<Character,Integer> map = new HashMap<Character,Integer>();
-    for (char ch : chars) {
-       if(map.containsKey(ch)) {
-        map.put(ch,map.get(ch)+1);
-       } else {
-        map.put(ch,1);
-       }
-  }
-  for(Map.Entry<Character,Integer> hs : map.entrySet()) {
-    System.out.println(hs.getKey() + " " + hs.getValue());
-}
-  }
+
+     }
+     for(Map.Entry<Character,Integer> hs : map.entrySet()) {
+      System.out.println("alphabet : "+hs.getKey()+"   " +"FreqCount : "+hs.getValue());
+      System.out.println("\n");
+     }
 }
 
+ }
